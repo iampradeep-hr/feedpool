@@ -3,7 +3,7 @@ package com.pradeep.feedpool.db
 import androidx.room.TypeConverter
 import com.pradeep.feedpool.models.Source
 
-class Convertes {
+class Converters {
 
     @TypeConverter
     fun fromSource(source: Source):String{

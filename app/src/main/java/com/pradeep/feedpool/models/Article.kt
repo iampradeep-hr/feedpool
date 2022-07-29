@@ -14,7 +14,7 @@ data class Article(
     val content: String,
     val description: String,
     val publishedAt: String,
-    val source: Source, //Room supports only primitive datatypes and strings, not custom
+    val source: Source, //Room supports only primitive dataTypes and strings, not custom
     //use type converters
     val title: String,
     val url: String,
