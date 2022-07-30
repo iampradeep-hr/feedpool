@@ -2,6 +2,7 @@ package com.pradeep.feedpool.ui.fragments
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,14 +21,33 @@ class BreakingNewsFragment: Fragment(R.layout.fragment_breaking_news) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setUpWithRecyclerView()
+
         newsViewModel=(activity as NewsActivity).newsViewModel
         newsViewModel.breakingNews.observe(viewLifecycleOwner,Observer{ response ->
             when(response){
-                is Resource.Success ->{}
-                is Resource.Error -> {}
-                is Resource.Loading -> {}
+                is Resource.Success ->{
+                    hideProgressBar()
+                     response.data?.let {
+                         newsAdapter.differ.submitList(it.articles)
+                     }
+                }
+                is Resource.Error -> {
+                    hideProgressBar()
+                    Toast.makeText(activity, "Something Went Wrong :/", Toast.LENGTH_SHORT).show()
+                }
+                is Resource.Loading -> {
+                    showProgressBar()
+                }
             }
         })
+    }
+
+    private fun hideProgressBar(){
+        paginationProgressBar.visibility=View.INVISIBLE
+    }
+    private fun showProgressBar(){
+        paginationProgressBar.visibility=View.VISIBLE
     }
 
     private fun setUpWithRecyclerView(){

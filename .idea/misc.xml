@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/FeedPool/app/src/main/res/drawable-v24/bg_home_btnav.xml" value="0.153" />
+        <entry key="..\:/FeedPool/app/src/main/res/drawable/bg_bottom_nav.xml" value="0.2" />
         <entry key="..\:/FeedPool/app/src/main/res/drawable/black_gradient.xml" value="0.224" />
+        <entry key="..\:/FeedPool/app/src/main/res/drawable/bt_nav_icon_tint.xml" value="0.153" />
         <entry key="..\:/FeedPool/app/src/main/res/drawable/ic_bookmark_news.xml" value="0.153" />
         <entry key="..\:/FeedPool/app/src/main/res/drawable/ic_breaking_news.xml" value="0.153" />
         <entry key="..\:/FeedPool/app/src/main/res/drawable/ic_launcher_background.xml" value="0.153" />
@@ -14,7 +17,7 @@
         <entry key="..\:/FeedPool/app/src/main/res/layout/fragment_breaking_news.xml" value="0.22239583333333332" />
         <entry key="..\:/FeedPool/app/src/main/res/layout/fragment_saved_news.xml" value="0.2234375" />
         <entry key="..\:/FeedPool/app/src/main/res/layout/fragment_search_news.xml" value="0.2234375" />
-        <entry key="..\:/FeedPool/app/src/main/res/layout/item_article_preview.xml" value="0.264" />
+        <entry key="..\:/FeedPool/app/src/main/res/layout/item_article_preview.xml" value="0.4" />
         <entry key="..\:/FeedPool/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2234375" />
       </map>
     </option>
