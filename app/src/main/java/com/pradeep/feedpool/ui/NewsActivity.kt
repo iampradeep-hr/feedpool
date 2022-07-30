@@ -22,7 +22,7 @@ class NewsActivity : AppCompatActivity() {
 
         val newsRepository= NewsRepository(ArticleDatabase.getArticleDatabase(this))
         val viewModelProviderFactory = NewsViewModelProviderFactory(newsRepository)
-        newsViewModel=ViewModelProvider(this,viewModelProviderFactory).get(NewsViewModel::class.java)
+        newsViewModel= ViewModelProvider(this,viewModelProviderFactory)[NewsViewModel::class.java]
 
 
 
@@ -30,11 +30,6 @@ class NewsActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.newsNavHostFragment) as NavHostFragment
         val navController = navHostFragment.navController
         binding.bottomNavigationView.setupWithNavController(navController)
-
-        //api key
-        //a27983d4d15b4c7bbdc940b07e36c369
-
-
 
 
 

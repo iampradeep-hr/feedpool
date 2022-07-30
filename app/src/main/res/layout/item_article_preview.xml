@@ -26,7 +26,7 @@
         <ImageView
             android:id="@+id/news_image"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="200dp"
             android:contentDescription="image"
             android:foreground="@drawable/black_gradient"
             android:scaleType="centerCrop"
