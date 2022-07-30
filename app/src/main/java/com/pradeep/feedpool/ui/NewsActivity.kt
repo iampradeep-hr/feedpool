@@ -8,6 +8,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.pradeep.feedpool.R
 import com.pradeep.feedpool.databinding.ActivityNewsBinding
 import com.pradeep.feedpool.db.ArticleDatabase
+import com.pradeep.feedpool.repository.NewsRepository
 
 class NewsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewsBinding
@@ -19,7 +20,7 @@ class NewsActivity : AppCompatActivity() {
         binding=ActivityNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val newsRepository= ArticleDatabase.getArticleDatabase(this)
+        val newsRepository= NewsRepository(ArticleDatabase.getArticleDatabase(this))
         val viewModelProviderFactory = NewsViewModelProviderFactory(newsRepository)
         newsViewModel=ViewModelProvider(this,viewModelProviderFactory).get(NewsViewModel::class.java)
 

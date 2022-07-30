@@ -8,7 +8,7 @@ import com.pradeep.feedpool.ui.NewsViewModel
 
 class ArticleFragment: Fragment(R.layout.fragment_article ) {
 
-    lateinit var newsViewModel: NewsViewModel
+    private lateinit var newsViewModel: NewsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
