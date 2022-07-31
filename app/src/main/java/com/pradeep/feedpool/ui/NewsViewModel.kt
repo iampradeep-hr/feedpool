@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.room.Query
+import com.pradeep.feedpool.models.Article
 import com.pradeep.feedpool.models.NewsResponse
 import com.pradeep.feedpool.repository.NewsRepository
 import com.pradeep.feedpool.util.Resource
@@ -48,6 +49,16 @@ class NewsViewModel (val newsRepository: NewsRepository):ViewModel() {
             }
         }
         return Resource.Error(response.message().toString())
+    }
+
+    fun saveArticle(article: Article)=viewModelScope.launch {
+        newsRepository.upsert(article)
+    }
+
+    fun getSavedNews()=newsRepository.getSavedNews()
+
+    fun deleteArticle(article: Article)=viewModelScope.launch {
+        newsRepository.deleteArticle(article)
     }
 
 
