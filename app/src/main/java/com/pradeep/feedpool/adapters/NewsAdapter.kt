@@ -11,7 +11,7 @@ import com.pradeep.feedpool.R
 import com.pradeep.feedpool.models.Article
 import kotlinx.android.synthetic.main.item_article_preview.view.*
 
-class NewsAdapter: RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
+class NewsAdapter: RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>(){
 
     inner class ArticleViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView) {
 
@@ -60,7 +60,7 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
     }
 
     private var onItemClickListener:((Article)->Unit)?=null
-    fun setOnItemClickListener(listener: (Article)->Unit){
+    fun setOnItemClickListener(listener:(Article)->Unit){
         onItemClickListener=listener
     }
 

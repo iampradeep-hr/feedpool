@@ -45,5 +45,9 @@
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.pradeep.feedpool.ui.fragments.ArticleFragment"
-        android:label="ArticleFragment" />
+        android:label="ArticleFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.pradeep.feedpool.models.Article" />
+    </fragment>
 </navigation>
