@@ -14,12 +14,9 @@ import com.pradeep.feedpool.R
 import com.pradeep.feedpool.adapters.NewsAdapter
 import com.pradeep.feedpool.ui.NewsActivity
 import com.pradeep.feedpool.ui.NewsViewModel
-import com.pradeep.feedpool.util.Constants
 import com.pradeep.feedpool.util.Constants.Companion.QUERY_PAGE_SIZE
 import com.pradeep.feedpool.util.Resource
-import kotlinx.android.synthetic.main.fragment_breaking_news.*
 import kotlinx.android.synthetic.main.fragment_search_news.*
-import kotlinx.android.synthetic.main.fragment_search_news.paginationProgressBar
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay

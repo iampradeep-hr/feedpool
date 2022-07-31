@@ -12,11 +12,11 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
         android:hint="Search News"
-        app:hintTextColor="#06D265"
-        app:boxStrokeColor="#06D265"
+        android:padding="8dp"
         android:textColorHint="#06D265"
+        app:boxStrokeColor="#06D265"
+        app:hintTextColor="#06D265"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +26,9 @@
             android:id="@+id/etSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:maxLines="1"
             android:textCursorDrawable="@drawable/bg_text_cursor"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -40,12 +41,14 @@
         android:id="@+id/rvSearchNews"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="4dp"
         android:clipToPadding="false"
         android:paddingBottom="50dp"
-        android:layout_marginTop="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField" />
 
     <ProgressBar
         android:id="@+id/paginationProgressBar"
