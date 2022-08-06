@@ -24,6 +24,8 @@ class NewsActivity : AppCompatActivity() {
         val viewModelProviderFactory = NewsViewModelProviderFactory(newsRepository)
         newsViewModel= ViewModelProvider(this,viewModelProviderFactory)[NewsViewModel::class.java]
 
+        
+
 
 
         //bottom nav view with nav controller
