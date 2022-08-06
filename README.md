@@ -16,6 +16,8 @@ Locate the app as app-debug.apk (OR)
 https://www.dropbox.com/s/2945bu9m9qnfolp/app-debug.apk?dl=0
 # Installation
 Installation:After downloading accept the permission and ready to use!
+Please open the downloaded .apk file on your Default Files applicaiton of your phone.
+Do not open the file from chrome downloads.
 # TechStack
 ## Kotlin 
 ## MVVM Architecture
