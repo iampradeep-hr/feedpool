@@ -1,24 +1,22 @@
 package com.pradeep.feedpool.ui
 
+import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.room.Query
 import com.pradeep.feedpool.NewsApplication
 import com.pradeep.feedpool.models.Article
 import com.pradeep.feedpool.models.NewsResponse
 import com.pradeep.feedpool.repository.NewsRepository
 import com.pradeep.feedpool.util.Resource
-import kotlinx.coroutines.internal.artificialFrame
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
-class NewsViewModel (val newsRepository: NewsRepository,app:NewsApplication):AndroidViewModel(app) {
+class NewsViewModel (val newsRepository: NewsRepository,app: Application):AndroidViewModel(app) {
 
     val breakingNews:MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
     var breakingNewsPage=1
@@ -41,7 +39,7 @@ class NewsViewModel (val newsRepository: NewsRepository,app:NewsApplication):And
                 breakingNews.postValue(Resource.Error("No Internet Connection!"))
             }
         }catch (e:Throwable){
-                breakingNews.postValue(Resource.Error("Page not found!"))
+
         }
 
     }
@@ -56,7 +54,7 @@ class NewsViewModel (val newsRepository: NewsRepository,app:NewsApplication):And
                 searchNews.postValue(Resource.Error("No Internet Connection!"))
             }
         }catch (e:Throwable){
-            searchNews.postValue(Resource.Error("Page not found!"))
+
         }
 
     }

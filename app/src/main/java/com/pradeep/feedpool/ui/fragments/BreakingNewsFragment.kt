@@ -50,7 +50,7 @@ class BreakingNewsFragment: Fragment(R.layout.fragment_breaking_news) {
                 }
                 is Resource.Error -> {
                     hideProgressBar()
-                    Toast.makeText(activity, "Something Went Wrong :/", Toast.LENGTH_SHORT).show()
+                    (activity as NewsActivity).showNetworkDialog(response.message.toString())
                 }
                 is Resource.Loading -> {
                     showProgressBar()
