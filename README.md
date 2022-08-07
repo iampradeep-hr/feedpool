@@ -12,13 +12,14 @@ Complete
 <img src="https://user-images.githubusercontent.com/81664507/183260807-c6b048c3-b5c3-4c20-a4a4-8b71e4f62df5.png" width=300 height=300/>
 
 ## Installation and Setup Instructions
-Locate the app as app-debug.apk (OR)
-# Download from the Link below!
-https://www.dropbox.com/s/2945bu9m9qnfolp/app-debug.apk?dl=0
 # Installation
 Installation: After downloading accept the permission and ready to use!
 Please open the downloaded .apk file on your Default Files applicaiton of your phone.
 Do not open the file from chrome downloads.
+Locate the app as app-debug.apk (OR)
+# Download from the Link below!
+https://www.dropbox.com/s/2945bu9m9qnfolp/app-debug.apk?dl=0
+## If you wish to clone the project and use it, Please replace the API key with yours, Get your News API key from here- https://newsapi.org/
 # TechStack
 ## Kotlin 
 ## MVVM Architecture
